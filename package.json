@@ -1,17 +1,12 @@
 {
   "name": "@dalitek/tv-ui",
-  "version": "0.1.1",
-  "main": "dist/tv-ui.umd.js",
+  "version": "0.1.2",
+  "main": "dist/index.umd.js",
   "author": "zhagqn",
   "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/zhagqn/dalitek-tv-ui.git"
-  },
-  "homepage": "https://github.com/zhagqn/dalitek-tv-ui#readme",
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build --target lib --name tv-ui ./index.js",
+    "build": "vue-cli-service build --target lib --name index ./packages/index.js",
     "lint": "vue-cli-service lint",
     "test:unit": "vue-cli-service test:unit"
   },
@@ -33,5 +28,13 @@
     "sass": "^1.18.0",
     "sass-loader": "^7.1.0",
     "vue-template-compiler": "^2.6.10"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zhagqn/dalitek-tv-ui.git"
+  },
+  "bugs": {
+    "url": "https://github.com/zhagqn/junction-api/issues"
+  },
+  "homepage": "https://github.com/zhagqn/dalitek-tv-ui#readme"
 }

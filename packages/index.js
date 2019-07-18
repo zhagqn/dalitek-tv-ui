@@ -1,7 +1,7 @@
-import TvcPanel from "./packages/tvc-panel";
-import TvcCell from "./packages/tvc-cell";
-import TvcHandler from "./packages/tvc-handler";
-import utils from "./packages/utils";
+import TvcPanel from "./tvc-panel";
+import TvcCell from "./tvc-cell";
+import TvcHandler from "./tvc-handler";
+import utils from "./utils";
 
 const components = [TvcPanel, TvcCell];
 const handlers = [TvcHandler];
