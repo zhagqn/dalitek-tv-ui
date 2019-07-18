@@ -1,6 +1,6 @@
 import Vue from "vue";
 import App from "./App.vue";
-import tvUI from "../index";
+import tvUI from "../packages/index";
 import router from "./router";
 
 Vue.use(tvUI);
