@@ -1,5 +1,5 @@
 /*!
- * tv-ui v0.2.3 
+ * tv-ui v0.2.4 
  * (c) 2019 zhagqn
  * Released under the MIT License.
  */
@@ -88,6 +88,10 @@ var script = {
     value: {
       default: 0,
       type: Number
+    },
+    smooth: {
+      default: false,
+      type: Boolean
     }
   },
   data: function data() {
@@ -250,8 +254,12 @@ var script = {
         }
       }
 
-      move(); // this.$refs.wrapper.scrollLeft += scroll.x;
-      // this.$refs.wrapper.scrollTop += scroll.y;
+      if (this.smooth) {
+        move();
+      } else {
+        this.$refs.wrapper.scrollLeft += scroll.x;
+        this.$refs.wrapper.scrollTop += scroll.y;
+      }
     }
   },
   watch: {

@@ -14,6 +14,10 @@ export default {
     value: {
       default: 0,
       type: Number
+    },
+    smooth: {
+      default: false,
+      type: Boolean
     }
   },
   data() {
@@ -129,6 +133,7 @@ export default {
       if (childRect.y < parentRect.y) {
         scroll.y = childRect.y - parentRect.y;
       }
+
       let step = { x: scroll.x / 10, y: scroll.y / 10 };
       let that = this;
       function move(d = { x: 0, y: 0 }) {
@@ -153,9 +158,12 @@ export default {
           });
         }
       }
-      move();
-      // this.$refs.wrapper.scrollLeft += scroll.x;
-      // this.$refs.wrapper.scrollTop += scroll.y;
+      if (this.smooth) {
+        move();
+      } else {
+        this.$refs.wrapper.scrollLeft += scroll.x;
+        this.$refs.wrapper.scrollTop += scroll.y;
+      }
     }
   },
   watch: {
