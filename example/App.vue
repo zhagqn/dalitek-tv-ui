@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <div>
+      <tvc-bg-video :url="bgVideoUrl" :include="['about']" type="global"></tvc-bg-video>
       <div>{{message}}</div>
       <fieldset style="width: 800px; margin: 0 auto;">
         <legend>router</legend>
@@ -32,7 +33,11 @@ export default {
   data() {
     return {
       message: "",
-      focusPanel: 0
+      focusPanel: 0,
+      bgVideoUrl:
+        process.env.NODE_ENV === "development"
+          ? "media/bg.mp4"
+          : "http://192.168.10.11:88/static/0086000028_ytgg/bg.mp4"
     };
   },
   methods: {

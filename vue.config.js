@@ -9,5 +9,16 @@ module.exports = {
       // 输出文件名
       filename: "index.html"
     }
+  },
+  devServer: {
+    proxy: {
+      "^/media": {
+        target: "http://192.168.10.11:88/static/0086000028_ytgg",
+        changeOrigin: true,
+        pathRewrite: {
+          "^/media": ""
+        }
+      }
+    }
   }
 };

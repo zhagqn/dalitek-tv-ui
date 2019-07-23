@@ -1,9 +1,10 @@
+import TvcBgVideo from "./tvc-bg-video";
 import TvcPanel from "./tvc-panel";
 import TvcCell from "./tvc-cell";
 import TvcHandler from "./tvc-handler";
 import utils from "./utils";
 
-const components = [TvcPanel, TvcCell];
+const components = [TvcBgVideo, TvcPanel, TvcCell];
 const handlers = [TvcHandler];
 
 const install = function(Vue) {
